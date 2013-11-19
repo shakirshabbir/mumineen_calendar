@@ -12,8 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.bxslider
 //= require foundation
 //= require turbolinks
-//= require_tree .
-
-$(function(){ $(document).foundation(); });
+//
+//= require calendar
