@@ -22,7 +22,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <section role="main">
+      <%= yield %>
+    </section>
 
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   </body>
