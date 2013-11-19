@@ -1,7 +1,8 @@
 class DayPresenter
-  def initialize(hijri_date, gregorian_date)
+  def initialize(hijri_date, gregorian_date, is_filler = false)
     @hijri_date = hijri_date
     @gregorian_date = gregorian_date
+    @is_filler = is_filler
   end
 
   def hijri_day
