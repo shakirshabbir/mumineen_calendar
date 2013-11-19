@@ -1,2 +1,32 @@
-<h1>Calendar#index</h1>
-<p>Find me in app/views/calendar/index.html.erb</p>
+<% @calendar.each_month do |month| %>
+  <section class="month">
+    <h3><%= month.name %> <%= @year %></h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Sun</th>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+          <th>Sat</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% month.each_week do |week| %>
+          <tr>
+            <% week.each do |day| %>
+              <td class="day<% if day.is_filler? %> filler<% end %>">
+                <span class="h"><%= raw day.hijri_day %></span>
+                <span class="g"><%= raw day.gregorian_day %></span>
+              </td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </section>
+<% end %>
