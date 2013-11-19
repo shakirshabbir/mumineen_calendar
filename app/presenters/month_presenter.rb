@@ -45,7 +45,7 @@ class MonthPresenter
   def next_month_filler(hijri_date, gregorian_date)
     week = []
     6.downto(hijri_date.wday).each do |i|
-      offset = 7 - i
+      offset = 6 - i
       week << DayPresenter.new(hijri_date + offset, gregorian_date + offset, true)
     end
     week
