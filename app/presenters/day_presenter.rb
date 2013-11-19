@@ -23,6 +23,10 @@ class DayPresenter
     gregorian_date.strftime(date_format_string)
   end
 
+  def is_filler?
+    @is_filler
+  end
+
   private
 
   attr_reader :hijri_date, :gregorian_date
