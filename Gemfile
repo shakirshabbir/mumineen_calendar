@@ -43,3 +43,11 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'hijri_date'
+
+group :development, :test do
+  gem 'rspec-rails'
+end
+
+gem 'zurb-foundation'
