@@ -1,22 +1,32 @@
-<div class="slider">
-  <% @calendar.each_month do |month| %>
-    <section class="month row">
-      <div class="small-12 columns">
-        <h3><%= month.name %> <%= @year %></h3>
+<section>
+  <div id="month-meta" class="row">
+    <div class="small-2 columns prev"></div>
+    <div class="small-8 columns title"><h3></h3></div>
+    <div class="small-2 columns next"></div>
+  </div>
 
-        <table>
-          <thead>
-            <tr>
-              <th>Sun</th>
-              <th>Mon</th>
-              <th>Tue</th>
-              <th>Wed</th>
-              <th>Thu</th>
-              <th>Fri</th>
-              <th>Sat</th>
-            </tr>
-          </thead>
+  <div class="row">
+    <div class="small-12 columns">
+      <table id="days">
+        <tbody>
+          <tr>
+            <td>Sun</td>
+            <td>Mon</td>
+            <td>Tue</td>
+            <td>Wed</td>
+            <td>Thu</td>
+            <td>Fri</td>
+            <td>Sat</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="small-12 columns slider">
+      <% @calendar.each_month do |month| %>
+        <table data-month="<%= month.name %>" data-year="<%= @year %>" class="month">
           <tbody>
             <% month.each_week do |week| %>
               <tr>
@@ -30,7 +40,7 @@
             <% end %>
           </tbody>
         </table>
-      </div>
-    </section>
-  <% end %>
-</div>
+      <% end %>
+    </div>
+  </div>
+</section>
