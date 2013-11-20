@@ -16,6 +16,7 @@ class MonthPresenter
 
     weeks = []
     week = previous_month_filler(hijri_day, gregorian_day)
+
     while hijri_day.month == month do
       week << DayPresenter.new(hijri_day, gregorian_day)
 
@@ -27,7 +28,10 @@ class MonthPresenter
       hijri_day += 1
       gregorian_day += 1
     end
-    week += next_month_filler(hijri_day, gregorian_day)
+
+    if hijri_day.wday > 0
+      week += next_month_filler(hijri_day, gregorian_day)
+    end
     weeks << week
 
     weeks.each &block
