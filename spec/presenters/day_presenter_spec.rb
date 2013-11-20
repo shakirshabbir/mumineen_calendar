@@ -22,6 +22,11 @@ describe DayPresenter do
       presenter.gregorian_day.should == "6"
     end
 
+    it "presents just the Gregorian day when the day is a filler day" do
+      presenter = DayPresenter.new(hijri_date_2, gregorian_date_2, true)
+      presenter.gregorian_day.should == "6"
+    end
+
     it "presents the Gregorian day and month at the beginning of a Gregorian month" do
       presenter = DayPresenter.new(hijri_date_3, gregorian_date_3)
       presenter.gregorian_day.should == "1 Nov"

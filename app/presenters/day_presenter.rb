@@ -12,11 +12,11 @@ class DayPresenter
   def gregorian_day
     date_format_string = "%-d"
 
-    if hijri_date.day == 1 or gregorian_date.mday == 1
+    if (hijri_date.day == 1 or gregorian_date.mday == 1) and not is_filler
       date_format_string += " %b"
     end
 
-    if hijri_date.day == 1 or gregorian_date.yday == 1
+    if (hijri_date.day == 1 or gregorian_date.yday == 1) and not is_filler
       date_format_string += " %Y"
     end
 
@@ -29,7 +29,7 @@ class DayPresenter
 
   private
 
-  attr_reader :hijri_date, :gregorian_date
+  attr_reader :hijri_date, :gregorian_date, :is_filler
 
   def html_codes
     @html_codes ||= [
