@@ -26,6 +26,13 @@
       <%= yield %>
     </section>
 
+    <script>
+      var today = {
+        day: <%= @today.day %>,
+        month: <%= @today.month %>,
+        year: <%= @today.year %>
+      };
+    </script>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   </body>
 </html>

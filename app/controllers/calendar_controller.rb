@@ -1,7 +1,6 @@
 class CalendarController < ApplicationController
   def index
-    today = HijriDate.jd(Date.today.jd)
-    @year = today.year
-    @calendar = CalendarPresenter.new(@year)
+    @today = HijriDate.jd(Date.today.jd)
+    @calendar = CalendarPresenter.new(@today.year)
   end
 end

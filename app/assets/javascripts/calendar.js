@@ -7,12 +7,15 @@ $(document).ready(function () {
     mode: 'horizontal',
     minSlides: 1,
     maxSlides: 1,
-    slideWidth: $('.slider table').width(),
+    slideWidth: $('.month').width(),
+    startSlide: today.month - 1,
     pager: false,
     infiniteLoop: false,
     hideControlOnEnd: true,
-    onSliderLoad: function () {
-      $('#month-meta .title h3').text($('.month').first().data('month'));
+    onSliderLoad: function (currentIndex) {
+      $('#month-meta .title h3').text(
+        $('.month').eq(currentIndex).data('month')
+      );
     },
     onSlidePrev: function (slideElement) {
       $('#month-meta .title h3').text($(slideElement).data('month'));
