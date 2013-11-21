@@ -1,6 +1,7 @@
 class CalendarController < ApplicationController
   def index
     @today = HijriDate.jd(Date.today.jd)
-    @calendar = CalendarPresenter.new(@today.year)
+    @year = params['year'] ? params['year'].to_i : @today.year
+    @calendar = CalendarPresenter.new(@year)
   end
 end
