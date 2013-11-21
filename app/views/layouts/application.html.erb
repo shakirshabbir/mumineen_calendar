@@ -22,10 +22,9 @@
   </head>
 
   <body>
-    <section role="main">
-      <%= yield %>
-    </section>
+    <%= yield %>
 
+    <%= render 'footer' %>
     <script>
       var today = {
         day: <%= @today.day %>,
