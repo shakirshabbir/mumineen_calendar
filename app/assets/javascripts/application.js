@@ -16,3 +16,5 @@
 //= require turbolinks
 //
 //= require calendar
+
+$(function(){ $(document).foundation(); });

@@ -1,8 +1,6 @@
 $(document).ready(function () {
   'use strict';
 
-  $(document).foundation();
-
   $('.slider').bxSlider({
     mode: 'horizontal',
     minSlides: 1,
@@ -23,9 +21,9 @@ $(document).ready(function () {
     onSlideNext: function (slideElement) {
       $('#month-meta .title h3').text($(slideElement).data('month'));
     },
-    prevText: '<i class="fi-arrow-left large"></i>',
+    prevText: '<i class="fi-arrow-left"></i>',
     prevSelector: $('#month-meta .prev'),
-    nextText: '<i class="fi-arrow-right large"></i>',
+    nextText: '<i class="fi-arrow-right"></i>',
     nextSelector: $('#month-meta .next')
   });
 });
