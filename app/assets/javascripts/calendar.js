@@ -26,4 +26,8 @@ $(document).ready(function () {
     nextText: '<i class="fi-arrow-right"></i>',
     nextSelector: $('#month-meta .next')
   });
+
+  $('#year-meta #year').change(function (event) {
+    window.location.pathname = "/" + $(this).val().toString();
+  });
 });
