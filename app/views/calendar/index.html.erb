@@ -1,11 +1,18 @@
-<section>
+<section role="main">
   <div id="year-meta" class="row">
-    <div class="small-4 small-centered columns">
-      <input type="number" name="year" id="year" value="<%= @year %>" min="<%= CalendarController::MIN_YEAR %>" max="<%= CalendarController::MAX_YEAR %>" step="1" size="4" />
+    <div class="small-5 small-centered columns">
+      <div class="row collapse">
+        <div class="small-10 columns">
+          <input type="number" name="year" id="year" value="<%= @year %>" min="<%= CalendarController::MIN_YEAR %>" max="<%= CalendarController::MAX_YEAR %>" step="1" size="4" />
+        </div>
+        <div class="small-2 columns">
+          <span class="postfix">H</span>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div id="month-meta" class="row">
+  <div id="month-meta" class="row collapse">
     <div class="small-2 columns prev"></div>
     <div class="small-8 columns title"><h3></h3></div>
     <div class="small-2 columns next"></div>
