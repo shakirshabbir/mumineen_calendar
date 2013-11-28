@@ -21,9 +21,9 @@ $(document).ready(function () {
     onSlideNext: function (slideElement) {
       $('#month-meta .title h3').text($(slideElement).data('month'));
     },
-    prevText: '<i class="fi-arrow-left"></i>',
+    prevText: '<i class="foundicon-left-arrow"></i>',
     prevSelector: $('#month-meta .prev'),
-    nextText: '<i class="fi-arrow-right"></i>',
+    nextText: '<i class="foundicon-right-arrow"></i>',
     nextSelector: $('#month-meta .next')
   });
 
