@@ -7,7 +7,7 @@ describe CalendarHelper do
     end
 
     it "should be the minimum year if the specified year is the minimum year" do
-      prev_year(CalendarController::MIN_YEAR).should == CalendarController::MIN_YEAR
+      prev_year(CalendarPresenter::MIN_YEAR).should == CalendarPresenter::MIN_YEAR
     end
   end
 
@@ -17,7 +17,7 @@ describe CalendarHelper do
     end
 
     it "should be the maximum year if the specified year is the maximum year" do
-      next_year(CalendarController::MAX_YEAR).should == CalendarController::MAX_YEAR
+      next_year(CalendarPresenter::MAX_YEAR).should == CalendarPresenter::MAX_YEAR
     end
   end
 end
