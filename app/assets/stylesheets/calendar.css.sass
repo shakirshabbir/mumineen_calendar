@@ -1,56 +1,18 @@
 #year-meta
-  font:
-    size: 1.5em
-    weight: bold
-
-  input[name=year]
-    border: 2px solid #aaa
-    background-color: white
-    font-weight: bold
-    text-align: right
-
-    &:focus
-      outline: none
-      -webkit-box-shadow: none
-      box-shadow: none
-
-    &:focus, &:hover, &:active
-      border-color: #2ba6cb
-
-  span.postfix
-    border: 0
-    background-color: white
-
-#month-meta
-  vertical-align: middle
-
-  .title
-    h3
-      margin-top: 0.4em
-      text-align: center
-      font-size: 1.15em
-
+  text-align: center
+  h2
+    display: inline-block
   .prev, .next
-    text-align: center
-    margin: 0.25em 0 0.5em
-    i
-      font:
-        family: "foundation-icons"
-        size: 2em
+    margin: 0.35rem
 
-@media only screen and (min-width: 500px)
-  #month-meta
-    .title
-      h3
-        margin-top: 0.2em
-        font-size: 1.5em
 
-@media only screen and (min-width: 768px)
-  #month-meta
-    .title
-      h3
-        font-size: 2em
-
+@media only screen
+  #year-meta
     .prev, .next
-      i
-        font-size: 3em
+      font-size: 1.375rem
+
+
+@media only screen and (min-width: 40.063em)
+  #year-meta
+    .prev, .next
+      font-size: 1.6875rem

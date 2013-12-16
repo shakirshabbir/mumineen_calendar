@@ -1,18 +1,13 @@
 <section role="main">
   <div id="year-meta" class="row">
-    <div class="small-6 small-centered columns">
-      <div class="row collapse">
-        <div class="small-10 columns">
-          <input type="number" name="year" id="year" value="<%= @year %>" min="<%= CalendarController::MIN_YEAR %>" max="<%= CalendarController::MAX_YEAR %>" step="1" size="4" />
-        </div>
-        <div class="small-2 columns">
-          <span class="postfix">H</span>
-        </div>
-      </div>
+    <div class="small-12 columns">
+      <a class="prev" href="/<%= prev_year @year %>"><i class="foundicon-left-arrow"></i></a>
+      <h2><%= @year %>H</h2>
+      <a class="next" href="/<%= next_year @year %>"><i class="foundicon-right-arrow"></i></a>
     </div>
   </div>
 
-  <div id="month-meta" class="row collapse">
+  <div id="month-meta" class="row">
     <div class="small-2 columns prev"></div>
     <div class="small-8 columns title"><h3></h3></div>
     <div class="small-2 columns next"></div>
