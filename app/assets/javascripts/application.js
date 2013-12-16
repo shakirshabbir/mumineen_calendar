@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery.bxslider
 //= require foundation
-//= require turbolinks
 //
 //= require calendar
 
