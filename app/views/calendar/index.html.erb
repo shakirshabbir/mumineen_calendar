@@ -1,18 +1,23 @@
 <section role="main">
-  <div id="year-meta" class="row">
-    <div class="small-12 columns">
-      <h2>
-        <a class="prev" href="/<%= prev_year @year %>"><i class="icon-minus-sign"></i></a>
-        <%= @year %>H
-        <a class="next" href="/<%= next_year @year %>"><i class="icon-plus-sign"></i></a>
-      </h2>
+  <div class="row">
+    <div id="controls" class="small-12 columns">
+      <div id="year-meta">
+        <h2>
+          <a class="prev" href="/<%= prev_year @year %>"><i class="icon-minus-sign"></i></a>
+          <%= @year %>H
+          <a class="next" href="/<%= next_year @year %>"><i class="icon-plus-sign"></i></a>
+        </h2>
+      </div>
+      <div id="day-meta">
+        <a class="today button small" href="#">Today</a>
+      </div>
     </div>
   </div>
 
   <div id="month-meta" class="row">
-    <div class="small-2 medium-3 large-4 columns prev"></div>
-    <div class="small-8 medium-6 large-4 columns title"><h3></h3></div>
-    <div class="small-2 medium-3 large-4 columns next"></div>
+    <div class="small-2 columns prev"></div>
+    <div class="small-8 columns title"><h3></h3></div>
+    <div class="small-2 columns next"></div>
   </div>
 
   <div class="row">

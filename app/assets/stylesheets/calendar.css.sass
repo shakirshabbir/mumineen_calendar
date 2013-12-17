@@ -1,5 +1,9 @@
-#year-meta
+#controls
   text-align: center
+
+#year-meta
+  display: inline-block
+  vertical-align: top
   h2
     display: inline-block
 
@@ -7,9 +11,13 @@
   h3
     text-align: center
   .prev
-    text-align: right
-  .next
     text-align: left
+  .next
+    text-align: right
+
+#day-meta
+  display: inline-block
+  margin-left: 1rem
 
 
 @media only screen and (max-width: 30em)
@@ -32,3 +40,6 @@
   #month-meta
     .prev, .next
       font-size: 2.1875rem
+
+  #day-meta
+    margin-top: 0.35rem
