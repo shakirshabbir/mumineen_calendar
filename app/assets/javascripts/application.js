@@ -17,3 +17,8 @@
 //= require calendar
 
 $(function(){ $(document).foundation(); });
+
+$(document).ready(function () {
+  'use strict';
+  calendar.setup();
+});
