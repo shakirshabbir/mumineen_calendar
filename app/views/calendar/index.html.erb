@@ -39,7 +39,7 @@
             <% month.each_week do |week| %>
               <tr>
                 <% week.each do |day| %>
-                  <td class="day<% if day.is_filler? %> filler<% end %>">
+                  <td class="day<% if day.filler? %> filler<% end %>" data-doy="<%= day.doy %>">
                     <span class="h"><%= raw day.hijri_day %></span>
                     <span class="g"><%= raw day.gregorian_day %></span>
                   </td>

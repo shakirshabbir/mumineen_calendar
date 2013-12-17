@@ -1,7 +1,8 @@
 class DayPresenter
-  def initialize(hijri_date, gregorian_date, is_filler = false)
+  def initialize(hijri_date, gregorian_date, day_of_year, is_filler = false)
     @hijri_date = hijri_date
     @gregorian_date = gregorian_date
+    @day_of_year = day_of_year
     @is_filler = is_filler
   end
 
@@ -23,13 +24,17 @@ class DayPresenter
     gregorian_date.strftime(date_format_string)
   end
 
-  def is_filler?
+  def filler?
     @is_filler
+  end
+
+  def doy
+    @day_of_year
   end
 
   private
 
-  attr_reader :hijri_date, :gregorian_date, :is_filler
+  attr_reader :hijri_date, :gregorian_date, :day_of_year, :is_filler
 
   def html_codes
     @html_codes ||= [
