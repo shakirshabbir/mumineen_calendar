@@ -6,7 +6,7 @@ $(document).ready(function () {
     minSlides: 1,
     maxSlides: 1,
     slideWidth: $('.month').width(),
-    startSlide: today.month - 1,
+    startSlide: applicationData.year === applicationData.today.year ? applicationData.today.month - 1 : 0,
     pager: false,
     infiniteLoop: false,
     hideControlOnEnd: true,

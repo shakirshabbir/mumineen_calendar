@@ -17,14 +17,9 @@
     <%= yield %>
     <%= render 'footer' %>
 
-    <script>
-      var today = {
-        day: <%= @today.day %>,
-        month: <%= @today.month %>,
-        year: <%= @today.year %>
-      };
+    <script type="text/javascript">
+      var applicationData = <%= raw js_variables(@year, @today) %>;
     </script>
-
     <%= javascript_include_tag "application" %>
   </body>
 </html>
