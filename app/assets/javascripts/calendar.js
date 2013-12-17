@@ -29,9 +29,9 @@ var calendar = (function ($) {
         onSlideNext: function (slideElement) {
           $('#month-meta .title h3').text($(slideElement).data('month'));
         },
-        prevText: '<i class="foundicon-left-arrow"></i>',
+        prevText: '<i class="icon-chevron-sign-left"></i>',
         prevSelector: $('#month-meta .prev'),
-        nextText: '<i class="foundicon-right-arrow"></i>',
+        nextText: '<i class="icon-chevron-sign-right"></i>',
         nextSelector: $('#month-meta .next')
       });
     },
