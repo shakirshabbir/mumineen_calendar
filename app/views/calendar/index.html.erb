@@ -9,7 +9,7 @@
         </h2>
       </div>
       <div id="day-meta">
-        <a class="today button small" href="#">Today</a>
+        <a class="today button small" href="/">Today</a>
       </div>
     </div>
   </div>
@@ -41,20 +41,20 @@
   <div class="row">
     <div class="small-12 columns slider">
       <% @calendar.each_month do |month| %>
-        <table data-month="<%= month.name %>" data-year="<%= @year %>" class="month">
-          <tbody>
-            <% month.each_week do |week| %>
-              <tr>
-                <% week.each do |day| %>
-                  <td class="day<% if day.filler? %> filler<% end %>" data-doy="<%= day.doy %>">
-                    <span class="h"><%= raw day.hijri_day %></span>
-                    <span class="g"><%= raw day.gregorian_day %></span>
-                  </td>
-                <% end %>
-              </tr>
+      <table data-month="<%= month.name %>" data-year="<%= @year %>" class="month">
+        <tbody>
+          <% month.each_week do |week| %>
+          <tr>
+            <% week.each do |day| %>
+            <td class="day<% if day.filler? %> filler<% end %>" data-doy="<%= day.doy %>">
+              <span class="h"><%= raw day.hijri_day %></span>
+              <span class="g"><%= raw day.gregorian_day %></span>
+            </td>
             <% end %>
-          </tbody>
-        </table>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
       <% end %>
     </div>
   </div>
