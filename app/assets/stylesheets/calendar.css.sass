@@ -2,30 +2,33 @@
   text-align: center
   h2
     display: inline-block
-  .prev, .next
-    margin: 0.35rem
 
 #month-meta
-  text-align: center
-  .prev, .next
-    margin: 0.35rem 0
+  h3
+    text-align: center
+  .prev
+    text-align: right
+  .next
+    text-align: left
 
 
-@media only screen and (max-width: 40em)
-  #year-meta
-    .prev, .next
-      font-size: 1.375rem
-
+@media only screen and (max-width: 30em)
   #month-meta
     h3
       font-size: 1rem
+    .prev, .next
+      font-size: 1.5rem
+
+
+@media only screen and (min-width: 30.063em) and (max-width: 40em)
+  #month-meta
+    h3
+      font-size: 1.375rem
+    .prev, .next
+      font-size: 1.875rem
 
 
 @media only screen and (min-width: 40.063em)
-  #year-meta
-    .prev, .next
-      font-size: 1.6875rem
-
   #month-meta
     .prev, .next
-      font-size: 1.6875rem
+      font-size: 2.1875rem
