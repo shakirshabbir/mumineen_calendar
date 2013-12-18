@@ -35,3 +35,12 @@
 .icon-minus-sign:before {
 	content: "\e603";
 }
+.icon-sun:before {
+	content: "\e604";
+}
+.icon-moon:before {
+	content: "\e605";
+}
+.icon-circle:before {
+	content: "\e606";
+}
