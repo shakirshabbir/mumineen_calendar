@@ -15,10 +15,12 @@
 //= require foundation
 //
 //= require calendar
+//= require miqaats
 
 $(function(){ $(document).foundation(); });
 
 $(document).ready(function () {
   'use strict';
   calendar.setup();
+  miqaats.setup();
 });
