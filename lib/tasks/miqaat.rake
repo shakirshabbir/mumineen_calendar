@@ -2,8 +2,8 @@ require 'csv'
 require 'hijri_date'
 require 'json'
 
-namespace :miqaat do
-  desc "Convert CSV file containing miqaat data into a compressed JSON file."
+namespace :miqaats do
+  desc "Convert CSV file containing miqaat data into a JSON file."
   task csv_to_json: :environment do
     options = {
       :quote_char => '"',
@@ -14,7 +14,7 @@ namespace :miqaat do
     year = 1434
     
     data = {}
-    CSV.foreach('lib/assets/csv/miqaats.csv', options) do |row|
+    CSV.foreach("#{Rails.root}/lib/assets/miqaats.csv", options) do |row|
       date = HijriDate::Date.new(year, row[:month].to_i, row[:date].to_i)
       day_of_year = date.day_of_year.to_s
       miqaat_data = miqaat_hash(row)
@@ -26,7 +26,7 @@ namespace :miqaat do
       end
     end
 
-    File.open('lib/assets/json/miqaats.json', 'w') do |file|
+    File.open("#{Rails.root}/public/data/miqaats.json", 'w') do |file|
       file.write(data.to_json)
     end
   end
