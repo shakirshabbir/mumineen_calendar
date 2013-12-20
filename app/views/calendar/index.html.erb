@@ -51,18 +51,9 @@
               <span class="g"><%= raw day.gregorian_day %></span>
               <% if not day.filler? %>
               <div class="hide">
-                <% if day.miqaats.length > 0 %>
                 <ul class="miqaats">
-                  <% day.miqaats.each do |miqaat| %>
-                  <li>
-                    <span class="title"><%= miqaat.title %></span><br/>
-                    <%= miqaat.description %>
-                  </li>
-                  <% end %>
+                  <%= render(day.miqaats) || "<li>There are no miqaats on this day.</li>" %>
                 </ul>
-                <% else %>
-                <p>There are no miqaats on this day.</p>
-                <% end %>
               </div>
               <% end %>
             </td>
