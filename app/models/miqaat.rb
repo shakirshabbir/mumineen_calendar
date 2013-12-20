@@ -39,4 +39,8 @@ class Miqaat < ActiveFile::Base
       phase: data[:phase]
     }
   end
+
+  def self.all_for_date(date)
+    self.find_all_by_month_and_date(date.month, date.day).sort_by { |miqaat| miqaat.priority }
+  end
 end

@@ -49,7 +49,22 @@
             <td class="day<% if day.filler? %> filler<% end %>" data-doy="<%= day.doy %>">
               <span class="h"><%= raw day.hijri_day %></span>
               <span class="g"><%= raw day.gregorian_day %></span>
-              <div class="bg-icon"><i></i></div>
+              <% if not day.filler? %>
+              <div class="hide">
+                <% if day.miqaats.length > 0 %>
+                <ul class="miqaats">
+                  <% day.miqaats.each do |miqaat| %>
+                  <li>
+                    <span class="title"><%= miqaat.title %></span><br/>
+                    <%= miqaat.description %>
+                  </li>
+                  <% end %>
+                </ul>
+                <% else %>
+                <p>There are no miqaats on this day.</p>
+                <% end %>
+              </div>
+              <% end %>
             </td>
             <% end %>
           </tr>

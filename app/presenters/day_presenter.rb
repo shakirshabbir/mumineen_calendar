@@ -25,11 +25,15 @@ class DayPresenter
   end
 
   def filler?
-    @is_filler
+    is_filler
   end
 
   def doy
-    @day_of_year
+    day_of_year
+  end
+
+  def miqaats
+    @miqaats ||= Miqaat.all_for_date(hijri_date)
   end
 
   private
