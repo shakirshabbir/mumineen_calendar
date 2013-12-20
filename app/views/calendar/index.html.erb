@@ -50,9 +50,11 @@
               <span class="h"><%= raw day.hijri_day %></span>
               <span class="g"><%= raw day.gregorian_day %></span>
               <% if not day.filler? %>
-              <div class="hide">
+              <div class="modal-data hide">
+                <h3><%= raw day.hijri_date_string %></h3>
+                <h4><%= raw day.gregorian_date_string %></h4>
                 <ul class="miqaats">
-                  <%= render(day.miqaats) || "<li>There are no miqaats on this day.</li>" %>
+                  <%= render(day.miqaats) || raw("<li>There are no miqaats on this day.</li>") %>
                 </ul>
               </div>
               <% end %>

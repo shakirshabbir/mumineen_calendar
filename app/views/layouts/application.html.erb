@@ -16,6 +16,7 @@
     <%= render 'header' %>
     <%= yield %>
     <%= render 'footer' %>
+    <%= render 'modal' %>
 
     <script type="text/javascript">
       var applicationData = <%= raw js_variables(@year, @today) %>;

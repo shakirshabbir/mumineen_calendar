@@ -24,6 +24,14 @@ class DayPresenter
     gregorian_date.strftime(date_format_string)
   end
 
+  def hijri_date_string
+    hijri_date.to_s
+  end
+
+  def gregorian_date_string
+    gregorian_date.strftime('%-d %B %Y')
+  end
+
   def filler?
     is_filler
   end
