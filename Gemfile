@@ -49,3 +49,4 @@ end
 
 gem 'foundation-rails'
 gem 'active_hash'
+gem 'bourbon'
