@@ -12,12 +12,10 @@
 //
 //= require jquery
 //= require jquery.bxslider
-//= require foundation
+//= require jquery.magnific-popup
 //
 //= require calendar
 //= require miqaats
-
-$(function(){ $(document).foundation(); });
 
 $(document).ready(function () {
   'use strict';
