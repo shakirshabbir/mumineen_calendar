@@ -44,3 +44,6 @@
 .icon-circle:before {
 	content: "\e606";
 }
+.icon-remove-sign:before {
+	content: "\e607";
+}
