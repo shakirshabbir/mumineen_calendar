@@ -1,0 +1,42 @@
+.simple-modal
+  position: relative
+  background: #fff
+  padding: 1rem
+  width: auto
+  max-width: 980px
+  margin: 1rem auto
+
+  h3
+    padding-top: 0.8rem
+
+
+.mfp-zoom-in
+  // overlay at start
+  &.mfp-bg
+    opacity: 0
+    @include transition(all 0.25s ease-in-out)
+
+    // overlay animate in
+    &.mfp-ready
+      opacity: 0.52
+
+    // overlay animate out
+    &.mfp-removing
+      opacity: 0
+
+  // content at start
+  &.mfp-wrap
+    .mfp-content
+      opacity: 0
+      @include transition(all 0.25s ease-in-out)
+      @include transform(scale(0.75))
+
+    // content animate in
+    &.mfp-ready .mfp-content
+      opacity: 1
+      @include transform(scale(1))
+
+    // content animate out
+    &.mfp-removing .mfp-content
+      opacity: 0
+      @include transform(scale(0.75))

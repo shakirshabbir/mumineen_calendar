@@ -4,10 +4,24 @@ var miqaats = (function ($) {
   var miqaats = {
     // set it all up
     setup: function () {
-      $('.month .day').not('[data-doy=0]').on('click', function (event) {
-        $('#modal .container').empty();
-        $('#modal .container').html($(event.target).find('.modal-data').html());
-        $('#modal').foundation('reveal', 'open');
+      $('.month .day').not('[data-doy=0]').each(function (index, element) {
+        $(element).magnificPopup({
+          callbacks: {
+            beforeOpen: function () {
+              $('#modal .container').html($(element).find('.modal-data').html());
+            },
+            afterClose: function () {
+              $('#modal .container').empty();
+            }
+          },
+          items: {
+            src: '#modal',
+            type: 'inline'
+          },
+          mainClass: 'mfp-zoom-in',
+          midClick: true,
+          removalDelay: 500
+        });
       });
     }
   };
