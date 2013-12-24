@@ -43,11 +43,10 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'rspec-rails', group: [:development, :test]
-gem 'pg', group: :production
-gem 'rails_12factor', group: :production
-
 gem 'hijri_date'
+gem 'rspec-rails', group: [:development, :test]
 gem 'foundation-rails'
 gem 'active_hash'
 gem 'bourbon'
+gem 'pg', group: :production
+gem 'rails_12factor', group: :production
