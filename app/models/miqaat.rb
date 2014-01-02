@@ -16,7 +16,6 @@ class Miqaat < ActiveFile::Base
         :headers => true,
         :header_converters => :symbol
       }
-      year = 1434
 
       id = 0
       data = []
@@ -36,11 +35,12 @@ class Miqaat < ActiveFile::Base
       title: data[:title],
       description: data[:description],
       priority: data[:priority].to_i,
-      phase: data[:phase]
+      order: data[:order].to_i,
+      phase: data[:phase],
     }
   end
 
   def self.all_for_date(date)
-    self.find_all_by_month_and_date(date.month, date.day).sort_by { |miqaat| miqaat.priority }
+    self.find_all_by_month_and_date(date.month, date.day).sort_by { |miqaat| miqaat.order }
   end
 end
