@@ -1,8 +1,8 @@
-# Mumineen Calendar (http://mumineencalendar.com)
+# Mumineen Calendar
 
 ## Introduction
 
-Mumineen Calendar is a [Hijri calendar](http://en.wikipedia.org/wiki/Islamic_calendar) for [Dawoodi Bohra Shia Muslims](http://en.wikipedia.org/wiki/Dawoodi_bohra). It provides the user with the Hijri date, [Gregorian date](http://en.wikipedia.org/wiki/Gregorian_calendar) and associated namaaz (**salaat**) times for any day of the calendar year, based on their location.
+Mumineen Calendar is a [Hijri calendar](http://en.wikipedia.org/wiki/Islamic_calendar) for [Dawoodi Bohra Shia Muslims](http://en.wikipedia.org/wiki/Dawoodi_bohra). It provides the user with the Hijri date, [Gregorian date](http://en.wikipedia.org/wiki/Gregorian_calendar) and associated namaaz (**salaat**) times for any day of the calendar year, based on their location. **WORK IN PROGRESS**
 
 ## Setup
 
