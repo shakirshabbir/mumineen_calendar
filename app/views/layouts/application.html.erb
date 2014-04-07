@@ -21,5 +21,6 @@
       var applicationData = <%= raw js_variables(@year, @today) %>;
     </script>
     <%= javascript_include_tag "application" %>
+    <%= render 'google_analytics' %>
   </body>
 </html>
