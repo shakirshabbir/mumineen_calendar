@@ -51,6 +51,7 @@ GEM
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.9.2)
+    newrelic_rpm (3.7.3.204)
     pg (0.17.1)
     polyglot (0.3.4)
     rack (1.5.2)
@@ -128,6 +129,7 @@ DEPENDENCIES
   foundation-rails
   hijri_date
   jquery-rails
+  newrelic_rpm
   pg
   rails (= 4.0.1)
   rails_12factor
