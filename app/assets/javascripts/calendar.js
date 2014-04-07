@@ -36,7 +36,8 @@ var calendar = (function ($) {
         prevText: '<i class="icon-chevron-sign-left"></i>',
         prevSelector: $('#month-meta .prev'),
         nextText: '<i class="icon-chevron-sign-right"></i>',
-        nextSelector: $('#month-meta .next')
+        nextSelector: $('#month-meta .next'),
+        touchEnabled: false
       });
     },
 
