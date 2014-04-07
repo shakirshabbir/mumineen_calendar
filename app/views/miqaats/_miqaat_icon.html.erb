@@ -1,0 +1,13 @@
+<% if miqaat %>
+  <div class="bg-icon">
+    <% if miqaat.priority == 1 %>
+      <% if miqaat.phase == 'day' %>
+        <i class="icon-sun"></i>
+      <% else %>
+        <i class="icon-moon"></i>
+      <% end %>
+    <% else %>
+      <i class="icon-circle"></i>
+    <% end %>
+  </div>
+<% end %>

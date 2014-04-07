@@ -50,6 +50,7 @@
               <span class="h"><%= raw day.hijri_day %></span>
               <span class="g"><%= raw day.gregorian_day %></span>
               <% if not day.filler? %>
+              <%= render 'miqaats/miqaat_icon', miqaat: day.miqaats.first %>
               <div class="modal-data hide">
                 <h3><%= raw day.hijri_date_string %></h3>
                 <h4><%= raw day.gregorian_date_string %></h4>
