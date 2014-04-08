@@ -10,7 +10,6 @@ gem 'hijri_date'
 gem 'foundation-rails'
 gem 'active_hash'
 gem 'bourbon'
-gem 'sqlite3'
 
 group :doc do
   gem 'sdoc', require: false
@@ -18,6 +17,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'sqlite3'
 end
 
 group :production do
