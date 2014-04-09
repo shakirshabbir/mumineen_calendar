@@ -10,6 +10,7 @@ gem 'hijri_date'
 gem 'foundation-rails'
 gem 'active_hash'
 gem 'bourbon'
+gem 'high_voltage'
 
 group :doc do
   gem 'sdoc', require: false
